@@ -7,3 +7,6 @@
 !.profile
 !/bin/
 !/bin/**/*
+!/.config/
+!/.config/i3/
+!/.config/i3/**/*
