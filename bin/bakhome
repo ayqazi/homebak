@@ -1,0 +1,7 @@
+tar -zvc \
+  --exclude /home/ayqazi/tmp \
+  --exclude /home/ayqazi/.local/share/Steam \
+  --exclude /home/ayqazi/.local/share/baloo \
+  --exclude /home/ayqazi/.cache \
+  --one-file-system \
+  /home/ayqazi -f /mnt/bak/home-bak/home-bak-$(date +%F-%H-%M-%S).tar.gz

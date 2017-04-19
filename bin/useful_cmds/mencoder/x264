@@ -1,0 +1,30 @@
+#!/bin/bash
+
+INPUT="$1"
+OUTPUT="$2"
+# AID=4352
+
+# Medium quality fast (also try bitrate 9000-12000 for higher quality)
+X264ENCOPTS_SHARED="bitrate=8000:subq=5:8x8dct:frameref=2:bframes=3:b_pyramid=normal:weight_b:threads=2"
+
+# High quality (also bitrate 12000 for Very High Quality)
+# X264ENCOPTS_SHARED="bitrate=8000:subq=6:partitions=all:8x8dct:me=umh:frameref=5:bframes=3:b_pyramid=normal:weight_b:threads=2"
+
+# Ludicrous quality (use upto 30000 if you're crazy)
+# TBC
+# X264ENCOPTS_SHARED="bitrate=15000:subq=6:partitions=all:8x8dct:me=umh:frameref=5:bframes=3:b_pyramid=normal:weight_b:threads=2"
+
+SHARED=""
+
+X264ENCOPTS_PASS1="pass=1"
+X264ENCOPTS_PASS2="pass=2"
+
+
+function error_exit {
+    echo $@
+    exit 1
+}
+
+mencoder -nosound -ovc x264 $SHARED -x264encopts $X264ENCOPTS_SHARED:$X264ENCOPTS_PASS1 -vf softskip,harddup $INPUT -o $OUTPUT || error_exit "pass 1 failure"
+
+mencoder -oac copy -ovc x264 $SHARED -x264encopts $X264ENCOPTS_SHARED:$X264ENCOPTS_PASS2 -vf softskip,harddup $INPUT -o $OUTPUT || error_exit "pass 2 failure"

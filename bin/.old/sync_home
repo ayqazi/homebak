@@ -1,0 +1,61 @@
+#!/bin/bash
+
+set -e
+
+HOSTNAME=$(hostname)
+
+if [ $HOSTNAME == 'sff' ] ; then
+        MASTER=/home/shared/ayqazi
+elif ! ping -c1 10.0.0.2 &> /dev/null ; then
+        MASTER=ssh://gateway.qazi.eu//home/shared/ayqazi
+else
+        MASTER=ssh://sff//home/shared/ayqazi
+fi
+
+cd "${HOME}"
+
+unison /home/ayqazi "$MASTER" -auto \
+        -ignore 'Regex ^\.unison/.{34}' \
+        -ignore 'Path .unison/*.log' \
+        -ignore 'BelowPath .cache' \
+        -ignore 'BelowPath .config/chromium' \
+        -ignore 'BelowPath .dbus/session-bus' \
+        -ignore 'BelowPath .netbeans/6.9/var/cache/index' \
+        -ignore 'Path .xsession-errors' \
+        -ignore 'BelowPath .emacs.d/auto-save-list' \
+        -ignore 'BelowPath .ido.last' \
+        -ignore 'Path .local' \
+        -ignore 'BelowPath .config/akonadi/db_data' \
+        -ignore 'Path .config/akonadi/akonadiserverrc' \
+        -ignore 'Name .#*' \
+        -ignore 'Name #*#' \
+        -ignore 'Path .kde/share/config/kmixrc' \
+        -ignore 'Path .kde/share/config/phonondevicesrc' \
+        -ignore 'Path .kde/share/config/kded_device_automounterrc' \
+        -ignore 'Path .gkrellm2/sensor-config' \
+        -ignore 'Path .gkrellm2/user-config' \
+        -ignore 'Path .gkrellm2/data' \
+        -ignore 'BelowPath .thumbnails' \
+        -ignore 'Name .bash_history' \
+        -ignore 'Name .irb-history' \
+        -ignore 'Path .ansible' \
+        -ignore 'Path .pulse' \
+        -ignore 'Path .mozilla/firefox/*/Cache' \
+        -ignore 'Path .Xauthority' \
+        -ignore 'Path .config/Synergy' \
+        -ignore 'Path src/lig/log/*.log' \
+        -ignore 'Path src/lig/tmp/cache/assets' \
+        -ignore 'Path work/tab' \
+        -ignore 'Path work/mopp' \
+        -ignore 'Path work/pd' \
+        -ignore 'Path Dropbox' \
+        -ignore 'Path .dropbox' \
+        -ignore 'Path .dropbox-dist' \
+        -ignore 'Path .steam' \
+        -ignore 'Path Steam' \
+        -ignore 'Path bak' \
+        -ignore 'Path .kde/share/apps/amarok' \
+        -ignore 'Path .kde/share/apps/gwenview/recentfolders' \
+        -ignore 'Path arch' \
+        -ignore 'Path .ssh/id_rsa-salmon-*' \
+        "$@"

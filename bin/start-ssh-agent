@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# source my output
+
+set -e
+
+(
+	flock -x 204
+
+	# File ~/.ssh-agent.current should exist
+	if [ -f ~/.ssh-agent.current ] ; then
+		source ~/.ssh-agent.current &> /dev/null
+		if ! ps -p $SSH_AGENT_PID &> /dev/null; then
+			sleep 2
+			# Can't find pid of that name
+			rm ~/.ssh-agent.current || true # ignore errors
+			flock -u 204
+			exec "$0"
+		fi
+	else
+		killall -u $USER ssh-agent &> /dev/null || true # ignore errors
+		ssh-agent > ~/.ssh-agent.current
+		flock -u 204
+	fi
+
+	cat ~/.ssh-agent.current
+
+) 204>/tmp/.start-ssh-agent-${USER}.lck

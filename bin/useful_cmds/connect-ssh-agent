@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eu
+
+#SOCKET=$(find /tmp/ssh-* -type s -user "$USER" | head -n1)
+#PID=$(echo \`basename $SOCKET\` | sed -e 's/^agent\.//')
+
+#echo -e "export SSH_AUTH_SOCK=${SOCKET}\nexport SSH_AGENT_PID=${PID}\n"
+
+SOCKET=$(find /run/user/${UID}/keyring-*/ssh)
+echo -e "export SSH_AUTH_SOCK=${SOCKET}"

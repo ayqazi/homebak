@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e -v
+
+service lightdm stop
+sleep 5
+echo DIS > /sys/kernel/debug/vgaswitcheroo/switch
+sleep 5
+
+service lightdm start

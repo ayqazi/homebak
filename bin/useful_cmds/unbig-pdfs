@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -ue
+
+for i in "${@}"; do
+        if echo "${i}" | sed -e ''
+        echo "${i}"
+done

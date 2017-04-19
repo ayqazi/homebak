@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+class WSKill
+  def self.from_file(filename)
+    contents = File.read(filename)
+    contents.gsub!(/[\n]+$/m, "\n")
+    contents.gsub!(/[ \t]+$/, '')
+    contents.gsub!(/^[ \t\n]+$/, '')
+    File.open(filename, "w") { |f| f.write contents }
+  end
+
+  def self.run
+    exceptions = {}
+
+    ARGV.each do |filename|
+      begin
+        self.from_file(filename)
+      rescue Exception => e
+        exceptions[filename] = e
+      end
+    end
+
+    exceptions.each do |filename, e|
+      puts "#{filename} wskill failed:\n#{e.message} (#{e.class.name}) #{e.backtrace.join("\n")}"
+    end
+  end
+
+end
+
+WSKill.run

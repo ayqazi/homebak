@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Have to print exit code before any other commands are executed, or
+# their exit statuses get listed instead of ours (I think)
+
+# defaults
+PCWDSEQ="40;36"
+
+case $(hostname) in
+jumper)
+        PCOL="01;37" # white
+        ;;
+big)
+        PCOL="01;32" # bright green
+        ;;
+sff)
+        PCOL="01;35" # bright magenta
+        ;;
+parasite1)
+        PCOL=34 # blue
+        ;;
+work1)
+        PCOL="01;33" # bright yellow
+        ;;
+esac
+
+PCOL_ESC="\[\033[00;${PCOL}m\]"
+
+L1=""
+L2="\[\033[00;31m\]Last:\[\033[00m\] \$? \[\033[00;31m\]Arch:\[\033[00m\] $(uname -m) \[\033[00;31m\]Time:\[\033[00m\] \d \t \[\033[00;31m\]Term:\[\033[00m\] $(tty)  \[\033[00;31m\]Jobs:\[\033[00m\] \j"
+
+L3="\[\033[00;31m\]Branch:\[\033[00m\] '"
+if type -t __git_ps1 > /dev/null; then
+        L3="${L3}\$(__git_ps1 "%s")"
+fi
+L3="${L3}' \[\033[00;31m\]Rev:\[\033[00m\] '\$(git rev-parse HEAD 2> /dev/null | cut -c -8)'"
+
+L4="${PCOL_ESC}[\u@\H\[\033[00;01;36m\] \w${PCOL_ESC}]\[\033[00m\]"
+L5="\[\033[00;01;36m\]\$\[\033[00m\] "
+
+PS1="$L1
+$L2
+$L3
+$L4
+$L5"
+
+unset PCOL PCWDSEQ L1 L2 L3 L4 L5

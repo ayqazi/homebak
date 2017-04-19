@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -ue
+
+# Based on
+# http://www.reddit.com/r/linux/comments/19q060/favorite_tiny_linux_scripts_convert_video_to_gif/
+
+VID="${PWD}/${1}"
+TMPDIR="$(mktemp -d)"
+cd "${TMPDIR}"
+
+ffmpeg -i "${VID}" out%04d.png # Extracts each frame of the video as a single gif
+convert -delay 25 -loop 0 out*.png vid-nonopt.gif # Combines all the frames into one very nicely animated gif.
+convert -layers Optimize vid-nonopt.gif vid.gif # Optimizes the gif using imagemagick
+
+# convert -delay 25 -loop 0 -layers Optimize out*.png vid.gif # all of above in one step
+
+# vvvvv Cleans up the leftovers
+#rm out*
+#rm anim.gif
+
+echo "${TMPDIR}/vid.gif"

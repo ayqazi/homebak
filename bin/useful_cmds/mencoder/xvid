@@ -1,0 +1,13 @@
+#!/bin/bash
+
+INPUT="$1"
+OUTPUT="$2"
+
+function error_exit {
+    echo $@
+    exit 1
+}
+
+mencoder $INPUT -oac mp3lame -ovc xvid -xvidencopts pass=1 -vf softskip,harddup -o /dev/null || error_exit "pass 1 failure"
+
+mencoder $INPUT -oac mp3lame -ovc xvid -xvidencopts pass=2:bitrate=800 -vf softskip,harddup -o $OUTPUT || error_exit "pass 2 failure"

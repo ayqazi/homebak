@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -ue
+
+SYSTYPE_FILE="${HOME}/.config/.system-type"
+
+if [[ -f "${SYSTYPE_FILE}" ]] ; then
+        SYSTYPE="$(cat "${SYSTYPE_FILE}")"
+        EXPORT_LOCATION="${HOME}/.config/touchpad-settings/${SYSTYPE}.conf.export"
+        [[ -f "${EXPORT_LOCATION}" ]] && mv "${EXPORT_LOCATION}" "${EXPORT_LOCATION}.bak"
+        echo "Exporting to ${EXPORT_LOCATION} , edit and remove .export suffix to enable loading"
+        synclient -l | tail -n+2 | sed 's/[ ]//g' | tee "${EXPORT_LOCATION}"
+else
+        echo "File ${SYSTYPE_FILE} must exist"
+fi
