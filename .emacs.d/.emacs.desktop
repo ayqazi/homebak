@@ -1,0 +1,63 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Mon Apr  3 18:16:03 2017
+;; Desktop file format version 206
+;; Emacs version 24.5.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22754 33619 50563 248000) (desktop . "206") "ayqazi@jumper" nil nil ((((font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (font-parameter) (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (foreground-color . "#000000") (background-color . "#fdfcfa") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground . "#eff0f1") (scroll-bar-background . "#31363b") (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . light) (cursor-color . "black") (sticky) (environment) (frameset--id . "348C-0C67-2AB5-DF2A") (frameset--mini t . t) (height . 60) (width . 120) (modeline . t) (minibuffer . t) (unsplittable) (left . 924) (top . 79) (icon-name) (visibility . t) (display . ":0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 6) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 60) (min-pixel-width . 80) (min-pixel-height-ignore . 30) (min-pixel-width-ignore . 48) (min-pixel-height-safe . 15) (min-pixel-width-safe . 16)) leaf (pixel-width . 992) (pixel-height . 885) (total-width . 124) (total-height . 59) (normal-height . 1.0) (normal-width . 1.0) (buffer "recording-processed-queue.cfndsl" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars 16 2 t nil) (vscroll . 0) (dedicated) (point . 323) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/" "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/ca-camera-association-queue.cfndsl" "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/activity-stop-queue.cfndsl" "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/lib/cfndsl_ext.rb" "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/recording-processed-queue.cfndsl" "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/recording-uploaded-queue.cfndsl" "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/lib/cfndsl_ext.rb"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/recording-processed-queue.cfndsl"
+  "recording-processed-queue.cfndsl"
+  'enh-ruby-mode
+  '(abbrev-mode ruby-block-mode subword-mode company-mode inf-ruby-minor-mode robe-mode)
+  323
+  '(289 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/ca-camera-association-queue.cfndsl"
+  "ca-camera-association-queue.cfndsl"
+  'enh-ruby-mode
+  '(abbrev-mode ruby-block-mode subword-mode company-mode inf-ruby-minor-mode robe-mode)
+  344
+  '(290 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/recording-uploaded-queue.cfndsl"
+  "recording-uploaded-queue.cfndsl"
+  'enh-ruby-mode
+  '(abbrev-mode ruby-block-mode subword-mode company-mode inf-ruby-minor-mode robe-mode)
+  306
+  '(306 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/ayqazi/work/bgch/src/puppet-hcam/cloudformation/lib/cfndsl_ext.rb"
+  "cfndsl_ext.rb"
+  'enh-ruby-mode
+  '(abbrev-mode ruby-block-mode subword-mode company-mode inf-ruby-minor-mode robe-mode)
+  138
+  '(135 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
