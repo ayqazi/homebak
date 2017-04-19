@@ -10,7 +10,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-. ~/bin/prompts/ayq.beta.prompt
+source "${HOME}/bin/prompts/ayq.beta.prompt"
+
+PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/apps/terraform/bin:${PATH}"
 
 export HISTCONTROL='erasedups:ignorespace'
 export HISTFILESIZE=1000000
@@ -54,15 +56,10 @@ alias egrep='egrep --col'
 alias mysql='mysql --sigint-ignore'
 alias ri='ri --no-gems'
 alias be='bundle exec '
-alias e="emacsclient -n "
+alias e='emacsclient -n '
 alias bastion-ssh='ssh -o '\''ProxyCommand ssh -q dr-bastion nc %h %p'\'''
-
-alias imagvault='ansible-vault --vault-password-file ~/work/imagination/.vault-password '
-alias imagplaybook='ansible-playbook --vault-password-file ~/work/imagination/.vault-password '
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-export PATH="${HOME}/apps/terraform/bin:${PATH}"
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
