@@ -2,3 +2,6 @@
 !/.gitignore
 !/.emacs.d/
 !/.emacs.d/**/*
+!.bash*
+!.profile
+.bash_history
