@@ -70,3 +70,5 @@ bar {
         tray_output primary
 }
 exec --no-startup-id mate-settings-daemon
+exec --no-startup-id xscreensaver -nosplash
+exec --no-startup-id touchpad-load-settings
