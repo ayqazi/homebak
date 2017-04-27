@@ -12,3 +12,6 @@
 !/.config/i3/**/*
 !/.config/i3status/
 !/.config/i3status/**/*
+!/doc/
+!/doc/sre-book/
+!/doc/sre-book/download.sh
