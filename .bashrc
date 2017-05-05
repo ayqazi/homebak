@@ -56,6 +56,7 @@ alias egrep='egrep --col'
 alias mysql='mysql --sigint-ignore'
 alias ri='ri --no-gems'
 alias be='bundle exec '
+alias ber='bundle exec rake '
 alias e='emacsclient -n '
 alias bastion-ssh='ssh -o '\''ProxyCommand ssh -q dr-bastion nc %h %p'\'''
 

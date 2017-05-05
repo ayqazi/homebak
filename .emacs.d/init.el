@@ -132,6 +132,7 @@
  '(default-frame-alist (quote ((width . 120) (height . 60))))
  '(electric-indent-mode nil)
  '(enh-ruby-add-encoding-comment-on-save nil)
+ '(enh-ruby-bounce-deep-indent t)
  '(enh-ruby-check-syntax (quote errors))
  '(enh-ruby-deep-indent-paren nil)
  '(enh-ruby-extra-keywords (quote ("raise")))
