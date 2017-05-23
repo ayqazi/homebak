@@ -2,9 +2,11 @@
 !/.gitignore
 !/.emacs.d/
 !/.emacs.d/**/*
-!.bash*
-.bash_history
-!.profile
+!/.bash*
+!/.bash_completion.d/
+!/.bash_completion.d/**/*
+/.bash_history
+!/.profile
 !/bin/
 !/bin/**/*
 !/.config/
