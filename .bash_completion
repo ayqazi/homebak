@@ -2,6 +2,6 @@
 
 if [[ -d ~/.bash_completion.d/ ]] ; then
         for f in ~/.bash_completion.d/* ; do
-                source f
+                source "${f}"
         done
 fi
