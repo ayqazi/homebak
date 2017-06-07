@@ -3,5 +3,7 @@ tar -zvc \
   --exclude /home/ayqazi/.local/share/Steam \
   --exclude /home/ayqazi/.local/share/baloo \
   --exclude /home/ayqazi/.cache \
+  --exclude /home/ayqazi/VirtualBox\ VMs \
+  --exclude /home/ayqazi/.vagrant.d \
   --one-file-system \
   /home/ayqazi -f /mnt/bak/home-bak/home-bak-$(date +%F-%H-%M-%S).tar.gz
