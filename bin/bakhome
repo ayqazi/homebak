@@ -5,5 +5,6 @@ tar -zvc \
   --exclude /home/ayqazi/.cache \
   --exclude /home/ayqazi/VirtualBox\ VMs \
   --exclude /home/ayqazi/.vagrant.d \
+  --exclude /home/ayqazi/work/pd/dev-img/hda.img \
   --one-file-system \
   /home/ayqazi -f /mnt/bak/home-bak/home-bak-$(date +%F-%H-%M-%S).tar.gz

@@ -1,1 +1,18 @@
-tar -zvc  --exclude /run --exclude /var/tmp --exclude /tmp --exclude /home --exclude /proc --exclude /dev --exclude /sys --exclude /service --exclude .14.04 --exclude /boot --exclude /var/lib/docker/aufs --exclude /var/cache/oracle-jdk8-installer --exclude /var/cache/apt --one-file-system / -f /mnt/bak/root-bak/root-bak-$(date +%F-%H-%M-%S).tar.gz
+tar -zvc  \
+    --exclude /run \
+    --exclude /var/tmp \
+    --exclude /tmp \
+    --exclude /home \
+    --exclude /proc \
+    --exclude /dev \
+    --exclude /sys \
+    --exclude /service \
+    --exclude .14.04 \
+    --exclude /boot \
+    --exclude /var/lib/docker \
+    --exclude /var/cache/oracle-jdk*-installer \
+    --exclude /var/cache/apt \
+    --exclude *.swap \
+    --exclude /opt/android \
+    --exclude /opt/android-studio \
+    --one-file-system / -f /mnt/bak/root-bak/root-bak-$(date +%F-%H-%M-%S).tar.gz
