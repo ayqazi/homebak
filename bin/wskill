@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -ue
+
+sed -i -e 's/[[:blank:]]*$//' -e '/^[[:blank:]]*$/d' "${@}"
