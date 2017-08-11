@@ -35,7 +35,6 @@ export IGNOREEOF=4
 export GOPATH="${HOME}/src/gopath"
 
 unset RUBYOPT
-export JRUBY_OPTS='--1.9 -J-XX:+TieredCompilation'
 
 case ${TERM} in
 xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
