@@ -1,10 +1,44 @@
-tar -zvc \
-  --exclude /home/ayqazi/tmp \
-  --exclude /home/ayqazi/.local/share/Steam \
-  --exclude /home/ayqazi/.local/share/baloo \
-  --exclude /home/ayqazi/.cache \
-  --exclude /home/ayqazi/VirtualBox\ VMs \
-  --exclude /home/ayqazi/.vagrant.d \
-  --exclude /home/ayqazi/work/pd/dev-img/hda.img \
-  --one-file-system \
-  /home/ayqazi -f /mnt/bak/home-bak/home-bak-$(date +%F-%H-%M-%S).tar.gz
+#!/bin/bash
+
+set -e
+
+EXCLUDES=(--exclude /home/ayqazi/tmp
+  --exclude /home/ayqazi/.local/share/Steam
+  --exclude /home/ayqazi/.local/share/baloo
+  --exclude /home/ayqazi/.cache
+  --exclude /home/ayqazi/VirtualBox\ VMs
+  --exclude /home/ayqazi/.vagrant.d
+  --exclude /home/ayqazi/work/pd/dev-img/hda.img
+  --exclude /home/ayqazi/.PlayOnLinux/wineprefix/lotro/drive_c/games/The\ Lord\ of\ the\ Rings\ Online
+  --exclude /home/ayqazi/.gradle
+  --exclude /home/ayqazi/.config/chromium
+  --exclude /home/ayqazi/.mozilla
+  --exclude /home/ayqazi/.dbus
+  --exclude /home/ayqazi/.emacs.d/auto-save-list
+  )
+
+remove_dir_prefix() {
+        for i in "${@}"; do
+                echo "${i}" | sed -e 's!^/home/ayqazi/!!'
+        done
+}
+
+if [[ "${1}" = "arch" ]] ; then
+    mount | grep /mnt/homearch > /dev/null || (echo "ERROR: Mount /mnt/homearch first" ; exit 2)
+    mkdir -p /mnt/homearch/ayqazi
+
+    RSYNCEXCLUDES=( "${EXCLUDES[@]#/home/ayqazi/}" )
+
+    # ruby -e 'puts ARGV.map {|i| "|#{i}|" }' rsync --archive \
+    rsync --archive \
+          --delete-delay \
+          --progress \
+          --verbose \
+          "${RSYNCEXCLUDES[@]}" \
+          /home/ayqazi /mnt/homearch/
+else
+        tar -zvc \
+            "${EXCLUDES[@]}" \
+            --one-file-system \
+            /home/ayqazi -f /mnt/bak/home-bak/home-bak-$(date +%F-%H-%M-%S).tar.gz
+fi
