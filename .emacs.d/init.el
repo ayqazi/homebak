@@ -75,12 +75,6 @@
   )
 (add-hook 'perl-mode-hook 'my-perl-mode-hook)
 
-(require 'flymake-jslint)
-(defun my-javascript-mode-hook ()
-  (lambda () (flymake-mode t))
-  )
-(add-hook 'javascript-mode-hook 'my-javascript-mode-hook)
-
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (require 'ruby-block)
