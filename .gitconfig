@@ -1,0 +1,8 @@
+[core]
+        excludesfile = /home/ayqazi/.global-gitignore
+[color]
+        ui = true
+[push]
+        default = upstream
+[commit]
+	verbose = true
