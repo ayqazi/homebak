@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+if xinput | grep -q 'VirtualBox mouse integration' ; then
+    xinput set-button-map 'ImExPS/2 Generic Explorer Mouse' 1 3 2 4 5
+fi
