@@ -5,11 +5,11 @@ object-id-list=['notification-area', 'clock', 'window-list', 'workspace-switcher
 
 [toplevels/bottom]
 expand=true
-orientation='top'
+orientation='bottom'
 screen=0
-y-bottom=-1
+y-bottom=0
 size=24
-y=0
+y=1056
 
 [objects/clock]
 applet-iid='ClockAppletFactory::ClockApplet'
