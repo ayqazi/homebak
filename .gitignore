@@ -24,3 +24,6 @@
 !/lib/perl5/
 !/lib/perl5/xkpasswd.pm/
 !/lib/perl5/xkpasswd.pm/**/*
+!/.bgch/
+!/.bgch/**/*
+!/.bgch_puppet_repo
