@@ -1,6 +1,6 @@
 [general]
 toplevel-id-list=['bottom']
-history-mate-run=['emacs']
+history-mate-run=['mate-terminal', 'galculator', 'virtualbox', 'parcellite', 'emacs', 'chromium-browser']
 object-id-list=['notification-area', 'clock', 'window-list', 'workspace-switcher', 'object-0']
 
 [toplevels/bottom]
@@ -35,9 +35,9 @@ panel-right-stick=true
 applet-iid='WnckletFactory::WorkspaceSwitcherApplet'
 locked=true
 toplevel-id='bottom'
-position=269
+position=1662
 object-type='applet'
-panel-right-stick=true
+panel-right-stick=false
 
 [objects/workspace-switcher/prefs]
 display-all-workspaces=true
