@@ -36,6 +36,10 @@ export GOPATH="${HOME}/src/gopath"
 
 unset RUBYOPT
 
+## BGCH opsbag
+export PATH="/home/ayqazi/work/bgch/src/opsbag/.bin:${PATH}"
+export C2HBAG_ROOT=/home/ayqazi/work/bgch/src/opsbag
+
 case ${TERM} in
 xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
 	PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'

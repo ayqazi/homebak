@@ -6,6 +6,7 @@
 !/.bash*
 !/.bash_completion.d/
 !/.bash_completion.d/**/*
+/.bash_completion.d/c2hbag_completion.sh
 /.bash_history
 !/.profile
 !/bin/
