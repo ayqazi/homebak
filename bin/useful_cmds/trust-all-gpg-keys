@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+gpg --list-keys --fingerprint | awk 'BEGIN { FS = "=" }; /Key fingerprint/ { gsub(/ /, "", $2); print $2":6:" }' | gpg --import-ownertrust
