@@ -37,7 +37,6 @@ export GOPATH="${HOME}/src/gopath"
 unset RUBYOPT
 
 ## BGCH opsbag
-export PATH="/home/ayqazi/work/bgch/src/opsbag/.bin:${PATH}"
 export C2HBAG_ROOT=/home/ayqazi/work/bgch/src/opsbag
 
 case ${TERM} in
@@ -63,7 +62,15 @@ alias ber='bundle exec rake '
 alias e='emacsclient -n '
 alias bastion-ssh='ssh -o '\''ProxyCommand ssh -q dr-bastion nc %h %p'\'''
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [[ -f "${HOME}/.rbenv/bin/rbenv" ]] ; then
+        export PATH="${HOME}/.rbenv/bin:${PATH}"
+        eval "$(rbenv init -)"
+fi
+
+if [[ -f "${HOME}/.pyenv/bin/pyenv" ]] ; then
+        export PYENV_ROOT="${HOME}/.pyenv"
+        export PATH="${HOME}/.pyenv/bin:${PATH}"
+        eval "$(pyenv init -)"
+fi
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
