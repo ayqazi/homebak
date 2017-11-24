@@ -68,15 +68,6 @@
   )
 (add-hook 'java-mode-hook 'my-java-mode-hook)
 
-
-;Customize perl-mode
-(defun my-perl-mode-hook ()
-  (setq perl-indent-level 8)
-  )
-(add-hook 'perl-mode-hook 'my-perl-mode-hook)
-
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
 (require 'ruby-block)
 (ruby-block-mode t)
 
@@ -84,9 +75,14 @@
     (clj-refactor-mode 1)
     (yas-minor-mode 1) ; for adding require/use/import
     (cljr-add-keybindings-with-prefix "C-c C-m"))
-
 (add-hook 'clojure-mode-hook 'my-clojure-mode-hook)
 
+(defun my-go-mode-before-save-hook ()
+  (when (eq major-mode 'go-mode)
+    (gofmt-before-save)))
+(add-hook 'before-save-hook 'my-go-mode-before-save-hook)
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ; Customised key bindings by me
 (global-set-key [home] 'beginning-of-buffer)
