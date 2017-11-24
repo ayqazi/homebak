@@ -32,7 +32,7 @@ unset LESSOPEN
 export LESS='-R'
 export IGNOREEOF=4
 
-export GOPATH="${HOME}/src/gopath"
+export GOPATH="${HOME}/src/go"
 
 unset RUBYOPT
 
