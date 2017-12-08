@@ -84,6 +84,8 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(setenv "GOPATH" (concat (getenv "HOME") "/src/go"))
+
 ; Customised key bindings by me
 (global-set-key [home] 'beginning-of-buffer)
 (global-set-key [end] 'end-of-buffer)
