@@ -1,18 +1,38 @@
+PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/apps/terraform/bin:${PATH}"
+
+umask 0002
+
+export GOPATH="${HOME}/src/go"
+
+## BGCH opsbag
+export C2HBAG_ROOT=/home/ayqazi/work/bgch/src/opsbag
+
+if [[ -f "${HOME}/.rbenv/bin/rbenv" ]] ; then
+        export PATH="${HOME}/.rbenv/bin:${PATH}"
+        eval "$(rbenv init -)"
+fi
+
+if [[ -f "${HOME}/.pyenv/bin/pyenv" ]] ; then
+        export PYENV_ROOT="${HOME}/.pyenv"
+        export PATH="${HOME}/.pyenv/bin:${PATH}"
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+        export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+fi
+
 # Test for an interactive shell.
 [[ $- != *i* ]] && return
 
+#### INTERACTIVE SHELL ONLY SETUP BELOW
+
 # ANNOYING BELLS!
 setterm -blength 0
-
-umask 0002
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
 source "${HOME}/bin/prompts/ayq.beta.prompt"
-
-PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/apps/terraform/bin:${PATH}"
 
 export HISTCONTROL='erasedups:ignorespace'
 export HISTFILESIZE=1000000
@@ -31,13 +51,6 @@ export PAGER='/usr/bin/less'
 unset LESSOPEN
 export LESS='-R'
 export IGNOREEOF=4
-
-export GOPATH="${HOME}/src/go"
-
-unset RUBYOPT
-
-## BGCH opsbag
-export C2HBAG_ROOT=/home/ayqazi/work/bgch/src/opsbag
 
 case ${TERM} in
 xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
@@ -61,18 +74,5 @@ alias be='bundle exec '
 alias ber='bundle exec rake '
 alias e='emacsclient -n '
 alias bastion-ssh='ssh -o '\''ProxyCommand ssh -q dr-bastion nc %h %p'\'''
-
-if [[ -f "${HOME}/.rbenv/bin/rbenv" ]] ; then
-        export PATH="${HOME}/.rbenv/bin:${PATH}"
-        eval "$(rbenv init -)"
-fi
-
-if [[ -f "${HOME}/.pyenv/bin/pyenv" ]] ; then
-        export PYENV_ROOT="${HOME}/.pyenv"
-        export PATH="${HOME}/.pyenv/bin:${PATH}"
-        eval "$(pyenv init -)"
-        eval "$(pyenv virtualenv-init -)"
-        export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-fi
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
