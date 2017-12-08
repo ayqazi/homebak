@@ -117,6 +117,7 @@
  '(change-log-default-name "Changes.txt")
  '(column-number-mode t)
  '(comment-auto-fill-only-comments t)
+ '(compilation-scroll-output (quote first-error))
  '(confirm-kill-emacs (quote y-or-n-p))
  '(cperl-indent-level 8)
  '(css-indent-offset 2)
