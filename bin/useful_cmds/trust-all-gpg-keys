@@ -1,5 +1,5 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
-gpg --list-keys --fingerprint | awk 'BEGIN { FS = "=" }; /Key fingerprint/ { gsub(/ /, "", $2); print $2":6:" }' | gpg --import-ownertrust
+gpg --list-keys --fingerprint --with-colons | awk 'BEGIN { FS = ":" }; $1 == "fpr" { print $10":6:" }' | gpg --import-ownertrust

@@ -192,6 +192,7 @@
  '(truncate-partial-width-windows nil)
  '(uniquify-ask-about-buffer-names-p t)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify))
+ '(use-file-dialog nil)
  '(vc-handled-backends nil)
  '(version-control (quote never))
  '(web-mode-code-indent-offset 2)
