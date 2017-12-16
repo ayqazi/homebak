@@ -6,3 +6,5 @@
         default = upstream
 [commit]
 	verbose = true
+[url "git@bgch.github.com:ConnectedHomes/"]
+	insteadOf = git@github.com:ConnectedHomes/
