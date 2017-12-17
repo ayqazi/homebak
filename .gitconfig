@@ -10,5 +10,5 @@
 	insteadOf = git@github.com:ConnectedHomes/
 [url "git@bgch.github.com:ConnectedHomes/"]
 	insteadOf = https://github.com/ConnectedHomes/
-[url "git@github.com:ConnectedHomes/"]
+[url "git@github.com:"]
 	insteadOf = https://github.com/
