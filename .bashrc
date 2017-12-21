@@ -40,6 +40,7 @@ export HISTSIZE=50000
 
 shopt -s histappend
 shopt -s checkwinsize
+shopt -s globstar
 
 export BROWSER='xdg-open'
 export TERMCMD='mrxvt'

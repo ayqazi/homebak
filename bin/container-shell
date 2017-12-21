@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+docker run --rm  --interactive --tty --init --volume "${PWD}":/src  ubuntu:xenial /bin/bash
