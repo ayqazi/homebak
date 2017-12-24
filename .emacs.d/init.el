@@ -137,6 +137,7 @@
  '(global-font-lock-mode t nil (font-lock))
  '(global-mark-ring-max 64)
  '(global-subword-mode t)
+ '(godef-command "/home/ayqazi/src/go/bin/godef")
  '(ido-case-fold t)
  '(ido-confirm-unique-completion t)
  '(ido-enable-flex-matching t)

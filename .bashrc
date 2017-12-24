@@ -1,8 +1,9 @@
-PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/apps/terraform/bin:${PATH}"
+export PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/apps/terraform/bin:${PATH}"
 
 umask 0002
 
 export GOPATH="${HOME}/src/go"
+export PATH="${PATH}:${GOPATH}/bin"
 
 ## BGCH opsbag
 export C2HBAG_ROOT=/home/ayqazi/work/bgch/src/opsbag
