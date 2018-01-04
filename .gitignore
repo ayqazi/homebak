@@ -25,3 +25,5 @@
 !/lib/perl5/
 !/lib/perl5/xkpasswd.pm/
 !/lib/perl5/xkpasswd.pm/**/*
+!/Desktop/
+!/Desktop/*.desktop
