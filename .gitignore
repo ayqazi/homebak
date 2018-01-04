@@ -7,7 +7,6 @@
 !/.bash*
 !/.bash_completion.d/
 !/.bash_completion.d/**/*
-/.bash_completion.d/c2hbag_completion.sh
 /.bash_history
 !/.profile
 !/bin/
@@ -26,6 +25,3 @@
 !/lib/perl5/
 !/lib/perl5/xkpasswd.pm/
 !/lib/perl5/xkpasswd.pm/**/*
-!/.bgch/
-!/.bgch/**/*
-!/.bgch_puppet_repo
