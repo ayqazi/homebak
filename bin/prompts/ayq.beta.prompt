@@ -7,20 +7,20 @@
 PCWDSEQ="40;36"
 
 case $(hostname) in
-jumper)
-        PCOL="01;37" # white
-        ;;
-big)
+# jumper)
+#         PCOL="01;37" # white
+#         ;;
+# sff)
+#         PCOL="01;35" # bright magenta
+#         ;;
+# parasite1)
+#         PCOL=34 # blue
+#         ;;
+# work1)
+#         PCOL="01;33" # bright yellow
+#         ;;
+*)
         PCOL="01;32" # bright green
-        ;;
-sff)
-        PCOL="01;35" # bright magenta
-        ;;
-parasite1)
-        PCOL=34 # blue
-        ;;
-work1)
-        PCOL="01;33" # bright yellow
         ;;
 esac
 
