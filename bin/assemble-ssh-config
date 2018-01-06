@@ -2,5 +2,6 @@
 
 set -euo pipefail
 
-ansible localhost -m assemble -a "src='${HOME}/.ssh/.config.d' dest='${HOME}/.ssh/config' \
-                                  owner=$(id -u) group=$(id -g) mode=0400 delimiter='\n' backup=yes"
+ansible localhost -i localhost, -c local \
+        -m assemble -a "src='${HOME}/.ssh/.config.d' dest='${HOME}/.ssh/config' \
+                        owner=$(id -u) group=$(id -g) mode=0400 delimiter='\n' backup=yes"
