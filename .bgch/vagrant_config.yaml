@@ -1,7 +1,0 @@
----
-:plugins:
-  - vagrant-s3auth
-
-:aws_profile: hcam-dev
-:vbox_bucket: uk.co.bgch.hcam.dev.vagrant
-:check_for_latest_box: true
