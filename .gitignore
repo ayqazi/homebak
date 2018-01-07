@@ -30,3 +30,4 @@
 !/.ssh/
 !/.ssh/.config.d/
 !/.ssh/.config.d/*.vendor
+!/.gemrc
