@@ -78,3 +78,6 @@ alias e='emacsclient -n '
 alias bastion-ssh='ssh -o '\''ProxyCommand ssh -q dr-bastion nc %h %p'\'''
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
+
+# Armakuni specific
+export CR_SHARED_ID=7782
