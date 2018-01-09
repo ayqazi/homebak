@@ -80,4 +80,4 @@ alias bastion-ssh='ssh -o '\''ProxyCommand ssh -q dr-bastion nc %h %p'\'''
 if [ -s ~/TODO ]; then cat ~/TODO; fi
 
 # Armakuni specific
-export CR_SHARED_ID=7782
+export CR_SHARD_ID=233
