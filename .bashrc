@@ -5,9 +5,6 @@ umask 0002
 export GOPATH="${HOME}/src/go"
 export PATH="${PATH}:${GOPATH}/bin"
 
-## BGCH opsbag
-export C2HBAG_ROOT=/home/ayqazi/work/bgch/src/opsbag
-
 if [[ -f "${HOME}/.rbenv/bin/rbenv" ]] ; then
         export PATH="${HOME}/.rbenv/bin:${PATH}"
         eval "$(rbenv init -)"
