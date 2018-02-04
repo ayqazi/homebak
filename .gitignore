@@ -19,6 +19,8 @@
 !/.config/i3status/**/*
 !/.config/desktop-setup/
 !/.config/desktop-setup/**/*
+!/.config/touchpad-settings/
+!/.config/touchpad-settings/**/*
 !/doc/
 !/doc/sre-book/
 !/doc/sre-book/download.sh
