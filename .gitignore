@@ -34,3 +34,5 @@
 !/.ssh/.config.d/
 !/.ssh/.config.d/*.vendor
 !/.gemrc
+!/.parallel/
+!/.parallel/will-cite
