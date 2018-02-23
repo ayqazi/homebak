@@ -8,3 +8,5 @@
 	verbose = true
 [url "git@github.com:ayqazi/"]
 	insteadOf = https://github.com/ayqazi/
+[fetch]
+	recurseSubmodules = yes
