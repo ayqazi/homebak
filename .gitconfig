@@ -1,12 +1,13 @@
 [core]
         excludesfile = /home/ayqazi/.global-gitignore
+        autocrlf = input
 [color]
         ui = true
 [push]
         default = upstream
 [commit]
-	verbose = true
+        verbose = true
 [url "git@github.com:ayqazi/"]
-	insteadOf = https://github.com/ayqazi/
+        insteadOf = https://github.com/ayqazi/
 [fetch]
-	recurseSubmodules = yes
+        recurseSubmodules = yes
