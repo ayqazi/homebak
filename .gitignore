@@ -36,3 +36,6 @@
 !/.gemrc
 !/.parallel/
 !/.parallel/will-cite
+!/.shutter/
+!/.shutter/**/*
+/.shutter/session.xml
