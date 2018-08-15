@@ -1,5 +1,5 @@
 [core]
-        excludesfile = ~/.global-gitignore
+        excludesfile = ~/.config/git/ignore
         autocrlf = input
 [color]
         ui = true

@@ -23,6 +23,8 @@
 !/.config/touchpad-settings/**/*
 !/.config/parcellite/
 !/.config/parcellite/**/*
+!/.config/git/
+!/.config/git/**/*
 !/doc/
 !/doc/sre-book/
 !/doc/sre-book/download.sh
