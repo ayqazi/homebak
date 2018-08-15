@@ -1,5 +1,5 @@
 [core]
-        excludesfile = /home/ayqazi/.global-gitignore
+        excludesfile = ~/.global-gitignore
         autocrlf = input
 [color]
         ui = true
