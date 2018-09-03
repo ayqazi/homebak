@@ -1,6 +1,6 @@
 export PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/apps/terraform/bin:${PATH}"
 
-umask 0002
+umask 0022
 
 export GOPATH="${HOME}/src/go"
 export PATH="${PATH}:${GOPATH}/bin"
@@ -25,7 +25,7 @@ fi
 #### INTERACTIVE SHELL ONLY SETUP BELOW
 
 # ANNOYING BELLS!
-setterm -blength 0
+setterm -blength 0 &> /dev/null
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
@@ -82,3 +82,5 @@ if [[ -d "${HOME}/.bashrc.d/" ]]; then
         source "${i}"
     done
 fi
+
+[[ -f "${HOME}/.wsl.env" ]] && source "${HOME}/.wsl.env"
