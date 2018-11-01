@@ -11,3 +11,5 @@
         insteadOf = https://github.com/ayqazi/
 [fetch]
         recurseSubmodules = yes
+[pager]
+	branch = /usr/bin/less -FRX
