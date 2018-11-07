@@ -4,10 +4,14 @@
 !/.global-gitignore
 !/.emacs.d/
 !/.emacs.d/**/*
-!/.bash*
+!/.bashrc
+!/.bashrc.d/
+!/.bashrc.d/.gitkeep
 !/.bash_completion.d/
 !/.bash_completion.d/**/*
 /.bash_history
+/.bash_profile
+/.bash_logout
 !/.profile
 !/bin/
 !/bin/**/*
