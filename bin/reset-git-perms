@@ -1,5 +1,23 @@
-#!/bin/bash
+#!/usr/bin/env ruby
 
-set -euo pipefail
+require 'pp'
+require 'fileutils'
+require 'pry'
 
-git ls-files -s | awk '{gsub(/^[0-9]{2}/, "", $1); if($1!="0000") {print "chmod " $1 " " $4}}' | while read i; do $i; done
+file_info = `git ls-files -s`.split("\n").map do |f|
+  parts = f.split(/\s/, 4)
+  {
+    mode: parts[0].to_i(8),
+    chmod: parts[0][2..-1].to_i(8),
+    file: parts.last,
+  }
+end
+
+file_info.each do |i|
+  stat = File.lstat(i[:file])
+  next if stat.symlink?
+  next if stat.mode == i[:mode]
+  printf("stat.mode=%o  i[:mode]=%o", stat.mode, i[:mode]) if ENV['DEBUG']
+  printf("chmod %04o %s\n", i[:mode], i[:file])
+  FileUtils.chmod i[:chmod], i[:file]
+end
