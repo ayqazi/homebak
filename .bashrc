@@ -65,7 +65,7 @@ test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors
 
 # Aliases (override existing ones)
 unalias -a
-alias ls='ls --col -F'
+alias ls='ls --col -F -X'
 alias grep='grep --col'
 alias egrep='egrep --col'
 alias mysql='mysql --sigint-ignore'
