@@ -18,6 +18,6 @@ file_info.each do |i|
   next if stat.symlink?
   next if stat.mode == i[:mode]
   printf("stat.mode=%o  i[:mode]=%o", stat.mode, i[:mode]) if ENV['DEBUG']
-  printf("chmod %04o %s\n", i[:mode], i[:file])
+  printf("chmod %04o %s\n", i[:chmod], i[:file])
   FileUtils.chmod i[:chmod], i[:file]
 end
