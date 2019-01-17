@@ -14,6 +14,7 @@ file_info = `git ls-files -s`.split("\n").map do |f|
 end
 
 file_info.each do |i|
+  next if ! File.exists?(i[:file])
   stat = File.lstat(i[:file])
   next if stat.symlink?
   next if stat.mode == i[:mode]
