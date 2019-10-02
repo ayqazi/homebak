@@ -1,7 +1,6 @@
 *
 !/.gitignore
 !/.gitconfig
-!/.global-gitignore
 !/.emacs.d/
 !/.emacs.d/**/*
 !/.bashrc

@@ -13,3 +13,5 @@
         recurseSubmodules = yes
 [pager]
 	branch = /usr/bin/less -FRX
+[user]
+	name = \"Asfand Qazi\"
