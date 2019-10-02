@@ -6,3 +6,4 @@
 /.floo
 /.rakeTasks
 /.generators
+__pycache__
