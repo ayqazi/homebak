@@ -45,3 +45,4 @@
 !/.shutter/
 !/.shutter/**/*
 /.shutter/session.xml
+!/.tmux.conf
