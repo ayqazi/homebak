@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -euo pipefail
+
+echo "THIS WILL DELETE EVERYTHING YOU BETTER BE READY. Press enter twice to confirm"
+read
+read
+
+containers="$(docker ps -a -q)"
+[[ -z "${containers}" ]] || docker container rm -vf ${containers}
+
+images="$(docker images -a -q)"
+[[ -z "${images}" ]] || docker image rm -f ${images}
