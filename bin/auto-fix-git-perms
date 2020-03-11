@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -euo pipefail
+
+target="${1}"
+shift
+
+fix_perms() {
+git ls-files -s "${1}" | while read mode _ _ file; do
+        chmodargs=""
+        [[ -z "${DEBUG:-}" ]] || chmodargs="-v"
+        chmod ${chmodargs} "${mode#??}" "${file}"
+done
+}
+
+inotifywait -qme modify --format %w \
+            $(find "${target}" -type f -path "${target}"'/*' ! -path "${target}"'/.*/*') \
+            | while read file; do
+    fix_perms "${file}"
+done
