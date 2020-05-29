@@ -19,6 +19,8 @@ if [[ -f "${HOME}/.pyenv/bin/pyenv" ]] ; then
         fi
 fi
 
+export DISABLE_SPRING=true
+
 # Test for an interactive shell.
 [[ $- != *i* ]] && return
 
@@ -73,7 +75,6 @@ alias ri='ri --no-gems'
 alias be='bundle exec '
 alias ber='bundle exec rake '
 alias e='emacsclient -n '
-alias bastion-ssh='ssh -o '\''ProxyCommand ssh -q dr-bastion nc %h %p'\'''
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
 
