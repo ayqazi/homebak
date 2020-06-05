@@ -19,8 +19,6 @@ if [[ -f "${HOME}/.pyenv/bin/pyenv" ]] ; then
         fi
 fi
 
-export DISABLE_SPRING=true
-
 # Test for an interactive shell.
 [[ $- != *i* ]] && return
 
