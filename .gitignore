@@ -27,6 +27,9 @@
 !/.config/parcellite/**/*
 !/.config/git/
 !/.config/git/**/*
+!/.local/
+!/.local/bin/
+!/.local/bin/.gitkeep
 !/doc/
 !/doc/sre-book/
 !/doc/sre-book/download.sh
