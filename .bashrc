@@ -1,4 +1,4 @@
-export PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/apps/terraform/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}"
 
 umask 0022
 
