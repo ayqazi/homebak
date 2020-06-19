@@ -9,6 +9,8 @@
         verbose = true
 [url "git@github.com:ayqazi/"]
         insteadOf = https://github.com/ayqazi/
+[url "git@github.com:ayqazi/"]
+        insteadOf = https://git@github.com/ayqazi/
 [fetch]
         recurseSubmodules = yes
 [pager]

@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-if [[ -n "${INSIDE_WSL}" ]] ; then
+if [[ -n "${INSIDE_WSL:-}" ]] ; then
     powershell.exe idea.cmd "${@}"
 else
     echo "Supported on WSL only apparently"
