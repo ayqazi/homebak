@@ -15,3 +15,5 @@
         recurseSubmodules = yes
 [pager]
 	branch = /usr/bin/less -FRX
+[pull]
+	ff = only

@@ -36,6 +36,6 @@ ellipsize=2
 multi_user=true
 icon_name=parcellite
 menu_key=
-history_key=<Mod4>v
+history_key=<Super>v
 phistory_key=
 actions_key=
