@@ -5,22 +5,27 @@ umask 0022
 export GOPATH="${HOME}/src/go"
 export PATH="${PATH}:${GOPATH}/bin"
 
-if [[ -f "${HOME}/.rbenv/bin/rbenv" ]] ; then
+if [ -f "${HOME}/.rbenv/bin/rbenv" ] ; then
         export PATH="${HOME}/.rbenv/bin:${PATH}"
         eval "$(rbenv init -)"
 fi
 
-if [[ -f "${HOME}/.pyenv/bin/pyenv" ]] ; then
+if [ -f "${HOME}/.pyenv/bin/pyenv" ] ; then
         export PYENV_ROOT="${HOME}/.pyenv"
         export PATH="${HOME}/.pyenv/bin:${PATH}"
         eval "$(pyenv init -)"
-        if [[ -d "${HOME}/.pyenv/plugins/pyenv-virtualenv" ]] ; then
+        if [ -d "${HOME}/.pyenv/plugins/pyenv-virtualenv" ] ; then
                 eval "$(pyenv virtualenv-init -)"
         fi
 fi
 
+if [ -f "${HOME}/.n/bin/npm" ] ; then
+        export N_PREFIX="${HOME}/.n"
+        export PATH="${N_PREFIX}/bin:${PATH}"
+fi
+
 # Test for an interactive shell.
-[[ $- != *i* ]] && return
+[ $- != '*i*' ] && return
 
 #### INTERACTIVE SHELL ONLY SETUP BELOW
 
@@ -35,7 +40,6 @@ source "${HOME}/bin/prompts/ayq.beta.prompt"
 
 export HISTCONTROL='erasedups:ignorespace'
 export HISTFILESIZE=1000000
-export HISTSIZE=50000
 
 shopt -s histappend
 shopt -s checkwinsize
@@ -76,10 +80,10 @@ alias e='emacsclient -n '
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
 
-if [[ -d "${HOME}/.bashrc.d/" ]]; then
+if [ -d "${HOME}/.bashrc.d/" ]; then
     for i in "${HOME}/.bashrc.d/"*; do
         source "${i}"
     done
 fi
 
-[[ -f "${HOME}/.wsl.env" ]] && source "${HOME}/.wsl.env"
+[ -f "${HOME}/.wsl.env" ] && source "${HOME}/.wsl.env"
