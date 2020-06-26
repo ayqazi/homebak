@@ -25,7 +25,7 @@ if [ -f "${HOME}/.n/bin/npm" ] ; then
 fi
 
 # Test for an interactive shell.
-[ $- != '*i*' ] && return
+[[ $- != *i* ]] && return 0
 
 #### INTERACTIVE SHELL ONLY SETUP BELOW
 
