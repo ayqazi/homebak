@@ -80,6 +80,7 @@ alias e='emacsclient -n '
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
 
+shopt -s nullglob
 if [ -d "${HOME}/.bashrc.d/" ]; then
     for i in "${HOME}/.bashrc.d/"*; do
         source "${i}"
@@ -87,3 +88,5 @@ if [ -d "${HOME}/.bashrc.d/" ]; then
 fi
 
 [ -f "${HOME}/.wsl.env" ] && source "${HOME}/.wsl.env"
+
+true
