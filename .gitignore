@@ -15,6 +15,11 @@
 !/bin/
 !/bin/**/*
 !/.config/
+!/.config/JetBrains/
+!/.config/JetBrains/IntelliJIdea2020.1/
+!/.config/JetBrains/IntelliJIdea2020.1/jba_config/
+!/.config/JetBrains/IntelliJIdea2020.1/jba_config/linux.keymaps/
+!/.config/JetBrains/IntelliJIdea2020.1/jba_config/linux.keymaps/Emacs copy.xml
 !/.config/i3/
 !/.config/i3/**/*
 !/.config/i3status/
