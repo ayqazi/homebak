@@ -6,6 +6,8 @@
 !/.bashrc
 !/.bashrc.d/
 !/.bashrc.d/.gitkeep
+!/.bashrc.d/00-*
+!/.bashrc.d/50-*
 !/.bash_completion.d/
 !/.bash_completion.d/**/*
 /.bash_history
