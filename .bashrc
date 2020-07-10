@@ -80,7 +80,6 @@ alias e='emacsclient -n '
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
 
-shopt -s nullglob
 if [ -d "${HOME}/.bashrc.d/" ]; then
     for i in "${HOME}/.bashrc.d/"*; do
         source "${i}"
