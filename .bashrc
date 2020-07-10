@@ -87,6 +87,4 @@ if [ -d "${HOME}/.bashrc.d/" ]; then
     done
 fi
 
-[ -f "${HOME}/.wsl.env" ] && source "${HOME}/.wsl.env"
-
 true
