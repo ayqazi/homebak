@@ -3,5 +3,5 @@
 set -ue
 
 killall syndaemon || true
-syndaemon -dktRi 0.4
+syndaemon -dktRi 1
 synclient $(cat ~/.config/touchpad-settings/native1.conf)

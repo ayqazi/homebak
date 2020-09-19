@@ -5,5 +5,5 @@
 /.flooignore
 /.floo
 /.rakeTasks
-/.generators
+.generators
 __pycache__
