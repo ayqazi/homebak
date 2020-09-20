@@ -1,9 +1,9 @@
 \#*#
 .#*
-/.idea
+.idea
 *.iml
-/.flooignore
-/.floo
-/.rakeTasks
+.flooignore
+.floo
+.rakeTasks
 .generators
 __pycache__
