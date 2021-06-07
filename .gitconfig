@@ -7,6 +7,7 @@
         default = upstream
 [commit]
         verbose = true
+	gpgsign = true
 [url "git@github.com:ayqazi/"]
         insteadOf = https://github.com/ayqazi/
 [url "git@github.com:ayqazi/"]
@@ -17,3 +18,5 @@
 	branch = /usr/bin/less -FRX
 [pull]
 	ff = only
+[init]
+	defaultBranch = master

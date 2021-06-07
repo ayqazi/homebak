@@ -10,10 +10,10 @@ TMPDIR="$(mktemp -d)"
 cd "${TMPDIR}"
 
 ffmpeg -i "${VID}" out%04d.png # Extracts each frame of the video as a single gif
-convert -delay 25 -loop 0 out*.png vid-nonopt.gif # Combines all the frames into one very nicely animated gif.
-convert -layers Optimize vid-nonopt.gif vid.gif # Optimizes the gif using imagemagick
+# convert -delay 25 -loop 0 out*.png vid-nonopt.gif # Combines all the frames into one very nicely animated gif.
+# convert -layers Optimize vid-nonopt.gif vid.gif # Optimizes the gif using imagemagick
 
-# convert -delay 25 -loop 0 -layers Optimize out*.png vid.gif # all of above in one step
+convert -delay 25 -loop 0 -layers Optimize out*.png vid.gif # all of above in one step
 
 # vvvvv Cleans up the leftovers
 #rm out*

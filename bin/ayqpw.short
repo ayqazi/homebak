@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+
+use lib "/home/ayqazi/lib/perl5/xkpasswd.pm/";
+use XKPasswd;
+use feature qw(say);
+use strict;
+use warnings;
+
+my $dict = "/home/ayqazi/lib/perl5/xkpasswd.pm/sample_dict.txt";
+my ($config_type) = @ARGV;
+$config_type = "strong" if (not defined $config_type);
+
+my $strong_config = {
+        num_words => 3,
+        word_length_min => 4,
+        word_length_max => 8,
+        case_transform => "CAPITALISE",
+        separator_character => "NONE",
+        padding_digits_before => 0,
+        padding_digits_after => 0,
+        padding_type => "NONE",
+        random_increment => "AUTO"
+};
+
+my $easy_config = {
+        num_words => 3,
+        word_length_min => 4,
+        word_length_max => 8,
+        case_transform => "CAPITALISE",
+        separator_character => "NONE",
+        padding_digits_before => 0,
+        padding_digits_after => 1,
+        padding_type => "NONE",
+        random_increment => "AUTO"
+};
+
+my $config;
+if ($config_type eq "easy") {
+    $config = $easy_config;
+} else {
+    $config = $strong_config;
+}
+
+my $xkpasswd_instance = XKPasswd->new($dict, "WEB32", $config);
+
+foreach($xkpasswd_instance->passwords(1))
+{
+        print "$_\n";
+}
