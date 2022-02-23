@@ -14,6 +14,8 @@ if [ -f "${HOME}/.pyenv/bin/pyenv" ] ; then
         export PYENV_ROOT="${HOME}/.pyenv"
         export PATH="${HOME}/.pyenv/bin:${PATH}"
         eval "$(pyenv init -)"
+        eval "$(pyenv init --path)"
+
         if [ -d "${HOME}/.pyenv/plugins/pyenv-virtualenv" ] ; then
                 eval "$(pyenv virtualenv-init -)"
         fi
@@ -55,6 +57,8 @@ export PAGER='/usr/bin/less'
 unset LESSOPEN
 export LESS='-R'
 export IGNOREEOF=4
+
+export DISABLE_SPRING=1 # always off by default, enable if we need it
 
 case ${TERM} in
 xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
