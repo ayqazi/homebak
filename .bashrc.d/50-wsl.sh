@@ -8,9 +8,14 @@ if [[ "${INSIDE_WSL}" ]]; then
     export LIBGL_ALWAYS_INDIRECT=1
 
     # Native OpenSSH support
-    if [[ -f /mnt/c/opt/ssh-agent-wsl/ssh-agent-wsl && -x /mnt/c/opt/ssh-agent-wsl/ssh-agent-wsl ]] ; then
-        chmod +x /mnt/c/opt/ssh-agent-wsl/ssh-agent-wsl /mnt/c/opt/ssh-agent-wsl/pipe-connector.exe
-        eval "$(/mnt/c/opt/ssh-agent-wsl/ssh-agent-wsl -rqa ~/.local/.ssh-agent-auth-sock-$(id -u))"
+    if [[ -f /mnt/c/opt/bin/npiperelay.exe ]] ; then
+        chmod +x /mnt/c/opt/bin/npiperelay.exe
+        export SSH_AUTH_SOCK=$HOME/.local/ssh-agent.sock
+        ss -a | grep -q $SSH_AUTH_SOCK
+        if [[ $? != 0 ]] ; then
+            rm -f $SSH_AUTH_SOCK
+            ( setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"/mnt/c/opt/bin/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork & ) &>>/tmp/ssh-agent-pipe-relay.log
+        fi
     fi
 fi
 
