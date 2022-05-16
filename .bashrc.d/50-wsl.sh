@@ -1,10 +1,11 @@
 if [[ "${INSIDE_WSL}" ]]; then
+    WSL_HOST="$(ip route show default | cut -d' ' -f3)"
 
     # Docker Desktop support
-    export DOCKER_HOST=localhost:2375
+    export DOCKER_HOST="${WSL_HOST}:2375"
 
     # Xvcsrv support
-    export DISPLAY=:0
+    export DISPLAY="${WSL_HOST}:0"
     export LIBGL_ALWAYS_INDIRECT=1
 
     # Native OpenSSH support
