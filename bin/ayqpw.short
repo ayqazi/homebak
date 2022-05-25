@@ -17,7 +17,7 @@ my $strong_config = {
         case_transform => "CAPITALISE",
         separator_character => "NONE",
         padding_digits_before => 0,
-        padding_digits_after => 0,
+        padding_digits_after => 1,
         padding_type => "NONE",
         random_increment => "AUTO"
 };
