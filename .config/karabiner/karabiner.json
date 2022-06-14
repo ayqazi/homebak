@@ -461,7 +461,7 @@
                         ]
                     },
                     {
-                        "description": "PC UK |",
+                        "description": "PC UK | (1)",
                         "manipulators": [
                             {
                                 "from": {
@@ -480,6 +480,33 @@
                                         "key_code": "backslash",
                                         "modifiers": [
                                             "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "PC UK | (2)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_shift"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "backslash",
+                                        "modifiers": [
+                                            "right_shift"
                                         ]
                                     }
                                 ],
