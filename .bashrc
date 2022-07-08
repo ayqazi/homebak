@@ -5,6 +5,12 @@ umask 0022
 export GOPATH="${HOME}/src/go"
 export PATH="${PATH}:${GOPATH}/bin"
 
+if [ -d "${HOME}/.bashrc.d/" ]; then
+    for i in "${HOME}/.bashrc.d/"*; do
+        source "${i}"
+    done
+fi
+
 if [ -f "${HOME}/.rbenv/bin/rbenv" ] ; then
         export PATH="${HOME}/.rbenv/bin:${PATH}"
         eval "$(rbenv init -)"
@@ -19,11 +25,6 @@ if [ -f "${HOME}/.pyenv/bin/pyenv" ] ; then
         if [ -d "${HOME}/.pyenv/plugins/pyenv-virtualenv" ] ; then
                 eval "$(pyenv virtualenv-init -)"
         fi
-fi
-
-if [ -f "${HOME}/.n/bin/npm" ] ; then
-        export N_PREFIX="${HOME}/.n"
-        export PATH="${N_PREFIX}/bin:${PATH}"
 fi
 
 # Test for an interactive shell.
@@ -48,7 +49,6 @@ shopt -s checkwinsize
 shopt -s globstar
 
 export BROWSER='xdg-open'
-export TERMCMD='mrxvt'
 export XEDITOR="emacs"
 export EDITOR="emacs"
 export VISUAL="emacs"
@@ -83,11 +83,5 @@ alias ber='bundle exec rake '
 alias e='emacsclient -n '
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
-
-if [ -d "${HOME}/.bashrc.d/" ]; then
-    for i in "${HOME}/.bashrc.d/"*; do
-        source "${i}"
-    done
-fi
 
 true
