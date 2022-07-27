@@ -922,13 +922,13 @@
                         ]
                     },
                     {
-                        "description": "Chrome PC CTRL-W",
+                        "description": "Browser PC CTRL-W",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$"
+                                            "^com\\.google\\.Chrome$", "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -951,13 +951,13 @@
                         ]
                     },
                     {
-                        "description": "Chrome PC CTRL-T",
+                        "description": "Browser PC CTRL-T",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$"
+                                            "^com\\.google\\.Chrome$", "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -980,13 +980,13 @@
                         ]
                     },
                     {
-                        "description": "Chrome PC CTRL-F",
+                        "description": "Browser PC CTRL-F",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$"
+                                            "^com\\.google\\.Chrome$", "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1009,13 +1009,13 @@
                         ]
                     },
                     {
-                        "description": "Chrome PC CTRL-R",
+                        "description": "Browser PC CTRL-R",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$"
+                                            "^com\\.google\\.Chrome$", "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1038,13 +1038,13 @@
                         ]
                     },
                     {
-                        "description": "Chrome PC CTRL-L",
+                        "description": "Browser PC CTRL-L",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$"
+                                            "^com\\.google\\.Chrome$", "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1067,13 +1067,13 @@
                         ]
                     },
                     {
-                        "description": "Chrome PC CTRL-N",
+                        "description": "Browser PC CTRL-N",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome$"
+                                            "^com\\.google\\.Chrome$", "^org\\.mozilla\\.firefox$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1088,6 +1088,35 @@
                                 "to": [
                                     {
                                         "key_code": "n",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Browser PC CTRL-Return",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome$", "^org\\.mozilla\\.firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter",
                                         "modifiers": ["left_command"]
                                     }
                                 ],
