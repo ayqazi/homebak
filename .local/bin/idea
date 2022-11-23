@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -euo pipefail
+
+idea_dir="$(/bin/ls -dv /mnt/c/Users/ayqaz/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/???.????.?? | tail -n1)"
+
+"${idea_dir}/bin/idea64.exe" "${@}"
