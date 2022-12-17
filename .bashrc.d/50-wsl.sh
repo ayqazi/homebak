@@ -1,5 +1,6 @@
 if [[ "${INSIDE_WSL}" ]]; then
-    WSL_HOST="$(ip route show default | cut -d' ' -f3)"
+    # WSL_HOST="$(ip route show default | cut -d' ' -f3)"
+    WSL_HOST="$(hostname).local"
 
     # Xvcsrv support
     export DISPLAY="${WSL_HOST}:0"

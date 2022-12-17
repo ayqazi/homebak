@@ -3,12 +3,14 @@
 set -euo pipefail
 shopt -s extglob
 
-if [[ -n "${INSIDE_WSL}" ]] ; then
-  idea_dir="$(/bin/ls -1dv /mnt/c/Users/ayqaz/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/+([0-9]).+([0-9]).+([0-9]) | tail -n1)"
+# if [[ -n "${INSIDE_WSL}" ]] ; then
+#   idea_dir="$(/bin/ls -1dv /mnt/c/Users/ayqaz/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/+([0-9]).+([0-9]).+([0-9]) | tail -n1)"
+#
+#   chmod +x "${idea_dir}/bin/idea64.exe"
+#   "${idea_dir}/bin/idea64.exe" "${@}"
+# else
+#   echo 'Not inside WSL' >&2
+#   exit 1
+# fi
 
-  chmod +x "${idea_dir}/bin/idea64.exe"
-  "${idea_dir}/bin/idea64.exe" "${@}"
-else
-  echo 'Not inside WSL' >&2
-  exit 1
-fi
+"${HOME}/.local/lib/idea/bin/idea.sh" "${@}"
