@@ -2,8 +2,8 @@ if [[ "${INSIDE_WSL}" ]]; then
     # WSL_HOST="$(ip route show default | cut -d' ' -f3)"
     WSL_HOST="$(hostname).local"
 
-    # Xvcsrv support
-    export DISPLAY="${WSL_HOST}:0"
+    # Xvcsrv support (wslg does not look or feel that good for now)
+    export DISPLAY="${WSL_HOST}:1"
     export LIBGL_ALWAYS_INDIRECT=1
 
     # Native OpenSSH support

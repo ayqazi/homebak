@@ -1,4 +1,4 @@
-if awk '{print $1}' /proc/mounts | grep -q 'C:\\'; then
+if [[ -n "${WSL_DISTRO_NAME}" ]]; then
     export INSIDE_WSL=1
 fi
 
