@@ -49,9 +49,9 @@ shopt -s checkwinsize
 shopt -s globstar
 
 export BROWSER='xdg-open'
-export XEDITOR="emacs"
-export EDITOR="emacs"
-export VISUAL="emacs"
+export XEDITOR="vim"
+export EDITOR="vim"
+export VISUAL="vim"
 export PAGER='/usr/bin/less'
 
 unset LESSOPEN
