@@ -46,7 +46,6 @@ export HISTFILESIZE=999999999
 
 shopt -s histappend
 shopt -s checkwinsize
-shopt -s globstar
 
 export BROWSER='xdg-open'
 export XEDITOR="vim"
@@ -60,20 +59,9 @@ export IGNOREEOF=4
 
 export DISABLE_SPRING=1 # always off by default, enable if we need it
 
-case ${TERM} in
-xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
-	PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"'
-	;;
-screen|screen.*)
-	PROMPT_COMMAND='echo -ne "\033_${PWD/$HOME/~}\033\\"'
-	;;
-esac
-
-test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-
 # Aliases (override existing ones)
 unalias -a
-alias ls='ls --col -F -X'
+alias ls='ls --col -F'
 alias grep='grep --col'
 alias egrep='egrep --col'
 alias mysql='mysql --sigint-ignore'

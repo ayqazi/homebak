@@ -2,6 +2,4 @@
 
 set -ue -o pipefail
 
-HOME="$(getent passwd $(id -u) | cut -d: -f6)"
-
 git --git-dir="${HOME}/.homebak/.git" --work-tree="${HOME}" "${@}"
