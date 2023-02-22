@@ -20,3 +20,5 @@
 	ff = only
 [init]
 	defaultBranch = master
+[include]
+	path = ~/.gitconfig.local ; NOT to be checked in
