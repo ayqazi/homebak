@@ -29,8 +29,6 @@
 !/.config/parcellite/**/*
 !/.config/git/
 !/.config/git/**/*
-!/.config/karabiner/
-!/.config/karabiner/karabiner.json
 !/.local/
 !/.local/bin/
 !/.local/bin/.gitkeep
