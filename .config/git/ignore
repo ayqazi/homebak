@@ -5,3 +5,4 @@
 .rakeTasks
 .generators
 __pycache__
+.idea
