@@ -20,7 +20,7 @@
 [init]
 	defaultBranch = master
 [include]
-	path = ~/.gitconfig.local ; NOT to be checked in
+	path = ~/.config/git/config.local ; NOT to be checked in
 [gpg]
 	format = ssh
 [user]
