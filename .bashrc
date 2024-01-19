@@ -2,29 +2,10 @@ export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}"
 
 umask 0022
 
-export GOPATH="${HOME}/src/go"
-export PATH="${PATH}:${GOPATH}/bin"
-
 if [ -d "${HOME}/.bashrc.d/" ]; then
     for i in "${HOME}/.bashrc.d/"*; do
         source "${i}"
     done
-fi
-
-if [ -f "${HOME}/.rbenv/bin/rbenv" ] ; then
-        export PATH="${HOME}/.rbenv/bin:${PATH}"
-        eval "$(rbenv init -)"
-fi
-
-if [ -f "${HOME}/.pyenv/bin/pyenv" ] ; then
-        export PYENV_ROOT="${HOME}/.pyenv"
-        export PATH="${HOME}/.pyenv/bin:${PATH}"
-        eval "$(pyenv init -)"
-        eval "$(pyenv init --path)"
-
-        if [ -d "${HOME}/.pyenv/plugins/pyenv-virtualenv" ] ; then
-                eval "$(pyenv virtualenv-init -)"
-        fi
 fi
 
 # Test for an interactive shell.
