@@ -6,8 +6,7 @@
 !/.bashrc
 !/.bashrc.d/
 !/.bashrc.d/.gitkeep
-!/.bashrc.d/00-*
-!/.bashrc.d/50-*
+!/.bashrc.d/*.sh
 !/.bash_completion.d/
 !/.bash_completion.d/**/*
 /.bash_history
@@ -29,6 +28,7 @@
 !/.config/parcellite/**/*
 !/.config/git/
 !/.config/git/**/*
+/.config/git/**/*.local
 !/.local/
 !/.local/bin/
 !/.local/bin/.gitkeep
