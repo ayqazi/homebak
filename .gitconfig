@@ -7,6 +7,7 @@
         default = upstream
 [commit]
         verbose = true
+	gpgsign = true
 [url "git@github.com:ayqazi/"]
         insteadOf = https://github.com/ayqazi/
 [url "git@github.com:ayqazi/"]
@@ -23,5 +24,3 @@
 	path = ~/.config/git/config.local ; NOT to be checked in
 [gpg]
 	format = ssh
-[user]
-	signingkey = /home/ayqazi/.ssh/id_ed25519.pub
