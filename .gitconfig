@@ -24,3 +24,5 @@
 	path = ~/.config/git/config.local ; NOT to be checked in
 [gpg]
 	format = ssh
+[user]
+	gpgsign = true
