@@ -5,7 +5,9 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
 	<key>AlwaysWarnBeforePastingOverSize</key>
-	<integer>50</integer>
+	<integer>200</integer>
+	<key>ClickToSelectCommand</key>
+	<true/>
 	<key>ConvertDosNewlines</key>
 	<false/>
 	<key>CopySelection</key>
