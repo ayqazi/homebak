@@ -4,6 +4,8 @@
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AlwaysWarnBeforePastingOverSize</key>
 	<integer>200</integer>
 	<key>ClickToSelectCommand</key>
@@ -139,6 +141,10 @@
 	<key>NeverWarnAboutOverrides</key>
 	<true/>
 	<key>NeverWarnAboutOverrides_selection</key>
+	<integer>0</integer>
+	<key>NeverWarnAboutShortLivedSessions_B67C5584-AE33-4B6E-AFC2-7A0FCFF2BE9C</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_B67C5584-AE33-4B6E-AFC2-7A0FCFF2BE9C_selection</key>
 	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
@@ -986,6 +992,8 @@
 			<false/>
 			<key>Shortcut</key>
 			<string></string>
+			<key>Show Offscreen Command line</key>
+			<false/>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Sync Title</key>
