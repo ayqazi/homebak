@@ -18,6 +18,6 @@ export SSH_AUTH_SOCK="${HOME}/Library/Group Containers/2BUA8C4S2C.com.1password/
 # Added by Toolbox App
 export PATH="$PATH:/Users/asfand/Library/Application Support/JetBrains/Toolbox/scripts"
 
-if [ -f "/opt/homebrew/opt/asdf/libexec/asdf.sh" ] ; then
-	. /opt/homebrew/opt/asdf/libexec/asdf.sh
-fi
+[[ -d "${HOME}/.asdf/shims" ]] && export PATH="${HOME}/.asdf/shims:${PATH}"
+
+[[ -d "/opt/homebrew/opt/rustup" ]] && export PATH="/opt/homebrew/opt/rustup/bin:${PATH}"
