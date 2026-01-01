@@ -20,7 +20,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-source "${HOME}/bin/prompts/ayq.beta.prompt"
+[[ -z "${NOPROMPT}" ]] && source "${HOME}/bin/prompts/ayq.beta.prompt"
 
 export HISTCONTROL='erasedups:ignorespace'
 export HISTFILESIZE=999999999
