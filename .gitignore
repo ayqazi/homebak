@@ -29,6 +29,8 @@
 !/.config/git/
 !/.config/git/**/*
 /.config/git/**/*.local
+!/.config/iterm2/
+!/.config/iterm2/keymap.itermkeymap
 !/.local/
 !/.local/bin/
 !/.local/bin/.gitkeep
