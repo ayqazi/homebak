@@ -23,7 +23,8 @@ fi
 [[ -z "${NOPROMPT}" ]] && source "${HOME}/bin/prompts/ayq.beta.prompt"
 
 export HISTCONTROL='erasedups:ignorespace'
-export HISTFILESIZE=999999999
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
 
 shopt -s histappend
 shopt -s checkwinsize
