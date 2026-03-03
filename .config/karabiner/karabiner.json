@@ -5,6 +5,7 @@
                 "rules": [
                     {
                         "description": "PC-Style Copy/Paste/Cut",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -172,6 +173,7 @@
                     },
                     {
                         "description": "PC-Style Undo",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -231,6 +233,7 @@
                     },
                     {
                         "description": "PC-Style Redo",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -290,6 +293,7 @@
                     },
                     {
                         "description": "PC-Style Select-All",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -349,6 +353,7 @@
                     },
                     {
                         "description": "PC Back a Word",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -408,6 +413,7 @@
                     },
                     {
                         "description": "PC Forward a Word",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -688,6 +694,7 @@
                     },
                     {
                         "description": "PC Control-Backspace",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -747,6 +754,7 @@
                     },
                     {
                         "description": "CMD+V -> CTRL+OPT+SHIFT+CMD+V (Clipboard manager)",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -803,6 +811,7 @@
                     },
                     {
                         "description": "Bold/Italic/Underline (CTRL+B/I/U -> CMD+B/I/U)",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1411,6 +1420,7 @@
                     },
                     {
                         "description": "PC CTRL-G",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
