@@ -1,5 +1,3 @@
-export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}"
-
 umask 0022
 
 if [ -d "${HOME}/.bashrc.d/" ]; then
@@ -7,6 +5,8 @@ if [ -d "${HOME}/.bashrc.d/" ]; then
         source "${i}"
     done
 fi
+
+export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}"
 
 # Test for an interactive shell.
 [[ $- != *i* ]] && return 0
