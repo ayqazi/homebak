@@ -473,6 +473,7 @@
                     },
                     {
                         "description": "PC Home/End Behaviour",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
