@@ -975,10 +975,7 @@
                             {
                                 "from": {
                                     "key_code": "2",
-                                    "modifiers": {
-                                        "mandatory": ["shift"],
-                                        "optional": ["any"]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
                                     {
@@ -996,10 +993,7 @@
                             {
                                 "from": {
                                     "key_code": "quote",
-                                    "modifiers": {
-                                        "mandatory": ["shift"],
-                                        "optional": ["any"]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
                                     {
