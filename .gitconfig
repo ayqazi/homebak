@@ -6,7 +6,7 @@
 [push]
         default = upstream
 [commit]
-        verbose = true
+	verbose = false
 	gpgsign = true
 [url "git@github.com:ayqazi/"]
         insteadOf = https://github.com/ayqazi/
