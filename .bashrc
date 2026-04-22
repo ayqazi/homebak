@@ -51,6 +51,7 @@ alias ri='ri --no-gems'
 alias be='bundle exec '
 alias ber='bundle exec rake '
 alias e='emacsclient -n '
+alias oc='/bin/bash -ec "[[ -f .env ]] && . .env;  opencode \"\$@\"" -- '
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
 
