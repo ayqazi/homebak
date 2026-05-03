@@ -1,6 +1,3 @@
 #!/bin/bash
 
-set -euo pipefail
-
-nohup /Applications/Firefox.app/Contents/MacOS/firefox -P personal &
-disown
+arch -arm64 open -a Firefox --args -P personal
