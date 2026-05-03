@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "enabled_providers": ["nvidia", "togetherai", "github-copilot", "minimax"],
+  "enabled_providers": ["github-copilot", "minimax", "openrouter"],
   "plugin": [
     "@slkiser/opencode-quota@latest"
     // "@tarquinen/opencode-dcp@latest"
