@@ -5,6 +5,7 @@
     "@slkiser/opencode-quota@latest"
     // "@tarquinen/opencode-dcp@latest"
   ],
+  "small_model": "minimax/MiniMax-M2.7",
   "mcp": {
     "ddg": {
       "type": "local",
