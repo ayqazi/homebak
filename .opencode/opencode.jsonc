@@ -6,6 +6,39 @@
     // "@tarquinen/opencode-dcp@latest"
   ],
   "small_model": "minimax/MiniMax-M2.7",
+  "provider": {
+    "openrouter": {
+      "models": {
+        "deepseek/deepseek-v3.2": {
+          "variants": {
+            "thinking": {
+              "reasoningEffort": "high"
+            }
+          }
+        }
+      }
+    },
+    "github-copilot": {
+      "models": {
+        "gpt-5.4": {
+          "variants": {
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "textVerbosity": "low"
+            }
+          }
+        },
+        "gpt-5.4-mini": {
+          "variants": {
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "textVerbosity": "low"
+            }
+          }
+        }
+      }
+    }
+  },
   "mcp": {
     "ddg": {
       "type": "local",
