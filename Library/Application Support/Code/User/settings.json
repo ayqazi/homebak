@@ -1,0 +1,41 @@
+{
+    "files.autoSave": "onWindowChange",
+    "files.autoSaveWhenNoErrors": true,
+    "files.autoSaveWorkspaceFilesOnly": true,
+    "chat.viewSessions.orientation": "stacked",
+    "files.trimTrailingWhitespace": true,
+    "git.blame.ignoreWhitespace": true,
+    "github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "python.useEnvironmentsExtension": false,
+    "git.autofetch": true,
+    "python.analysis.typeCheckingMode": "standard",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "json.schemaDownload.trustedDomains": {
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://models.dev": true,
+        "https://opencode.ai": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://www.schemastore.org/": true
+    },
+    "editor.detectIndentation": false,
+    "editor.inlineSuggest.enabled": false,
+    "diffEditor.renderSideBySide": false,
+    "git.openRepositoryInParentFolders": "never",
+    "chat.tips.enabled": false,
+    "workbench.list.openMode": "doubleClick",
+    "editor.tabSize": 2,
+    "files.exclude": {
+      "**/.*_cache": true,
+      "**/.venv": true,
+      "**/.vscode": true,
+      "**/dist": true,
+      "**/node_modules": true
+    }
+}
