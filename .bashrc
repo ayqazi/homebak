@@ -41,6 +41,8 @@ export IGNOREEOF=4
 
 export DISABLE_SPRING=1 # always off by default, enable if we need it
 
+export PYTHONPYCACHEPREFIX="$HOME/.cache/pycache"
+
 # Aliases (override existing ones)
 unalias -a
 alias ls='ls --col -F'
@@ -51,7 +53,7 @@ alias ri='ri --no-gems'
 alias be='bundle exec '
 alias ber='bundle exec rake '
 alias e='emacsclient -n '
-alias oc='/bin/bash -ec "[[ -f .env ]] && . .env;  opencode \"\$@\"" -- '
+alias oc='opencode '
 
 if [ -s ~/TODO ]; then cat ~/TODO; fi
 
