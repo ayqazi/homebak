@@ -1,6 +1,5 @@
 {
-    "files.autoSave": "onWindowChange",
-    "files.autoSaveWhenNoErrors": true,
+  "files.autoSaveWhenNoErrors": true,
     "files.autoSaveWorkspaceFilesOnly": true,
     "chat.viewSessions.orientation": "stacked",
     "files.trimTrailingWhitespace": true,
@@ -32,10 +31,30 @@
     "workbench.list.openMode": "doubleClick",
     "editor.tabSize": 2,
     "files.exclude": {
+      "**/__pycache__": true,
       "**/.*_cache": true,
       "**/.venv": true,
       "**/.vscode": true,
       "**/dist": true,
       "**/node_modules": true
-    }
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "explorer.autoReveal": "focusNoScroll",
+    "problems.autoReveal": false,
+    "scm.autoReveal": false,
+    "workbench.editor.empty.hint": "hidden",
+    "github.copilot.enable": {
+      "*": false
+    },
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "mermaid.vscode.aiExportName": false,
+    "mermaidChart.createDiagramFromStage.enabled": false,
+    "mermaidChart.preCommitSync.enabled": false,
+    "mermaidChart.showGenerateDiagramCodeLens": false,
+    "svelte.enable-ts-plugin": true,
+    "workbench.browser.openLocalhostLinks": false
 }
